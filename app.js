@@ -4,6 +4,10 @@ var http = require('http');
 var app = express();
 var fs = require('fs');
 
+app.get('/', function (req, res) {
+  res.send('Hello World again!');
+});
+
 fs.readFile('ILT.html', function(err, html){
   if(err)
     throw err;
@@ -13,16 +17,4 @@ fs.readFile('ILT.html', function(err, html){
     res.write(html);
     res.end();
   }).listen(8081);
-});
-
-app.get('/', function (req, res) {
-  res.send('Hello World again!');
-});
-
-app.get('/test', function(req, res){
-  res.send('ILT.html');
-});
-
-app.listen(8081, function () {
-  console.log('Example app listening on port 8081!');
 });
