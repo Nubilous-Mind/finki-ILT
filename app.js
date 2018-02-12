@@ -1,20 +1,16 @@
 var express = require('express');
 var mysql = require('mysql');
-var http = require('http');
 var app = express();
-var fs = require('fs');
+var path = require('path');
 
 app.get('/', function (req, res) {
   res.send('Hello World again!');
 });
 
-fs.readFile('ILT.html', function(err, html){
-  if(err)
-    throw err;
+app.get('/test', function(req, res){
+  res.sendFile(path.join(__dirname+'/ILT.html'));
+});
 
-  http.createServer(function(req, res){
-    res.writeHeader(200, {"Content-type": "text/html"});
-    res.write(html);
-    res.end();
-  }).listen(8081);
+app.listen(8081, function(){
+  console.log("Listening..");
 });
