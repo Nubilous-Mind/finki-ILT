@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/test', function(req, res){
-  res.sendFile(path.join(__dirname+'/ILT.html'));
+  res.sendFile(path.join(__dirname+'ILT.html'));
 });
 
 app.listen(8081, function(){
