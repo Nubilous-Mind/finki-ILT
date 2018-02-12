@@ -18,3 +18,4 @@ phases:
 artifacts:
   files:
     - app.js
+    - package.json
