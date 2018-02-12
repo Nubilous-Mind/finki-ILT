@@ -4,9 +4,8 @@ var app = express();
 var path = require('path');
 
 app.get('/', function (req, res) {
-  res.sendFile('ILT.html');
+  res.send('Hello World!');
 });
-
 
 app.listen(8081, function(){
   console.log("Listening..");
