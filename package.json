@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Nubilous-Mind/finki-ILT#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "mysql": "^2.15.0"
   }
 }
