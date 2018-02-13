@@ -22,7 +22,7 @@ connection.connect(function(err) {
 connection.end();
 
 app.get('/', function(req, res){
-  res.send('Hello World!');
+  res.sendFile('https://s3.eu-central-1.amazonaws.com/finki-ilt-tim5/ILT.html');
 });
 
 app.listen(8081, function(){
