@@ -2,7 +2,6 @@ var express = require('express');
 var mysql = require('mysql');
 var app = express();
 var path = require('path');
-var hike = require('routes/hike');
 
 var connection = mysql.createConnection({
   host     : process.env.RDS_HOSTNAME,
@@ -21,6 +20,10 @@ connection.connect(function(err) {
 });
 
 connection.end();
+
+app.get('/', function(req, res){
+  res.send('Hello World!');
+});
 
 app.listen(8081, function(){
   console.log("Listening..");
