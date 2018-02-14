@@ -15,7 +15,12 @@ connection.connect(function(err) {
     console.error('Database connection failed: ' + err.stack);
     return;
   }
-
+  connection.query("select * from worker", function (err, result, fields) {
+    // if any error while executing above query, throw error
+      if (err) throw err;
+    // if there is no error, you have the result
+      console.log(result);
+  });                
   console.log('Connected to database.');
 });
 
