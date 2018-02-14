@@ -20,11 +20,10 @@ connection.connect(function(err) {
       if (errorQuery) throw errorQuery;
     // if there is no error, you have the result
       console.log(result);
-  });                
+  });
+
   console.log('Connected to database.');
 });
-
-connection.end();
 
 app.get('/', function(req, res){
   res.redirect('https://s3.eu-central-1.amazonaws.com/finki-ilt-tim5/ILT.html');
