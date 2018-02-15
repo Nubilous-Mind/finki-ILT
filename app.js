@@ -27,7 +27,7 @@ connection.connect(function(err) {
 });
 
 app.get('/', function(req, res){
-  res.redirect('https://s3.eu-central-1.amazonaws.com/finki-ilt-tim5/ILT.html');
+  res.redirect('https://s3.eu-central-1.amazonaws.com/finki-ilt-tim5/stranica.html');
 });
 
 app.listen(8081, function(){
